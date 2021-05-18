@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Http_Test
 {
+    public partial class NetTest
+    {
+        
+    } 
     class InterLayer
     {
+
     }
 }

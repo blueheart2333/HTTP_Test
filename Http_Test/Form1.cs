@@ -180,6 +180,23 @@ namespace Http_Test //回调函数的用户层,执行输入等操作
 
             CFG.Save();
         }
+
+        public TextBox CheckBoxToTextBox(CheckBox checkBox)//输入一个单选框,返回一个文本框
+        {
+            string checkboxname = checkBox.Name;
+            
+            string textboxname = checkboxname.Split()[0];
+            foreach (Control item in this.Controls)//遍历所有控件,按控件名称返回
+            {
+                if (item.Name == textboxname)
+                {
+                    item.BackColor = Color.Red;
+                    return (TextBox)item;
+                }
+                
+            }
+            return (TextBox)item;
+        }
     }
         
 }
